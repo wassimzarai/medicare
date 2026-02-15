@@ -1,0 +1,221 @@
+<div class="admin-dashboard">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-container">
+        <div class="logo-circle"></div>
+        <span class="portal-title">MEDICAREAI Admin Portal</span>
+      </div>
+    </div>
+    
+    <nav class="sidebar-nav">
+      <ul class="nav-list">
+        <li class="nav-item active">
+          <a href="#" class="nav-link">
+            <span class="nav-icon">📊</span>
+            <span class="nav-text">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="nav-icon">👥</span>
+            <span class="nav-text">User Management</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="nav-icon">🔐</span>
+            <span class="nav-text">Roles & Permissions</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="nav-icon">❤️</span>
+            <span class="nav-text">Donations Management</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="nav-icon">📅</span>
+            <span class="nav-text">Events Management</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="nav-icon">💬</span>
+            <span class="nav-text">Forum Moderation</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="nav-icon">📋</span>
+            <span class="nav-text">Reports & Logs</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="nav-icon">⚙️</span>
+            <span class="nav-text">System Settings</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <div class="sidebar-footer">
+      <button class="logout-btn">
+        <span class="logout-icon">→</span>
+        <span class="logout-text">Logout</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Top Navigation -->
+    <header class="top-nav">
+      <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-input" />
+        <button class="search-clear-btn">✕</button>
+      </div>
+      
+      <div class="nav-actions">
+        <button class="notification-btn">
+          <span class="notification-icon">🔔</span>
+        </button>
+        
+        <div class="user-profile">
+          <div class="user-avatar">AD</div>
+          <div class="user-info">
+            <div class="user-name">Admin User</div>
+            <div class="user-role">System Administrator</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <main class="dashboard-content">
+      <h1 class="page-title">ADMINISTRATOR INTERFACE</h1>
+      
+      <!-- Stats Cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">👥</div>
+          <div class="stat-content">
+            <div class="stat-number">1,500</div>
+            <div class="stat-label">Total Users</div>
+          </div>
+          <div class="stat-growth positive">+12%</div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon">👤</div>
+          <div class="stat-content">
+            <div class="stat-number">45</div>
+            <div class="stat-label">New Users This Month</div>
+          </div>
+          <div class="stat-growth positive">+8%</div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon">❤️</div>
+          <div class="stat-content">
+            <div class="stat-number">24</div>
+            <div class="stat-label">Donation Requests</div>
+          </div>
+          <div class="stat-pending">8 Pending</div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon">📅</div>
+          <div class="stat-content">
+            <div class="stat-number">12</div>
+            <div class="stat-label">Events This Month</div>
+          </div>
+          <div class="stat-growth positive">+15%</div>
+        </div>
+      </div>
+
+      <!-- Charts Section -->
+      <div class="charts-grid">
+        <div class="chart-card large">
+          <div class="chart-header">
+            <h3 class="chart-title">User Growth</h3>
+            <a href="#" class="chart-link">View Details</a>
+          </div>
+          <div class="chart-content">
+            <div class="line-chart">
+              <div class="chart-placeholder">
+                <svg viewBox="0 0 400 200" class="chart-svg">
+                  <polyline
+                    fill="none"
+                    stroke="#10b981"
+                    stroke-width="2"
+                    points="50,150 100,120 150,100 200,80 250,60 300,40 350,30"
+                  />
+                  <polyline
+                    fill="url(#gradient)"
+                    fill-opacity="0.3"
+                    points="50,150 100,120 150,100 200,80 250,60 300,40 350,30 350,180 50,180"
+                  />
+                  <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.3" />
+                      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="chart-labels">
+                  <span>Jan</span>
+                  <span>Feb</span>
+                  <span>Mar</span>
+                  <span>Apr</span>
+                  <span>May</span>
+                  <span>Jun</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">Users by Role</h3>
+          </div>
+          <div class="chart-content">
+            <div class="pie-chart">
+              <div class="pie-chart-placeholder">
+                <svg viewBox="0 0 200 200" class="pie-svg">
+                  <circle cx="100" cy="100" r="80" fill="#10b981" />
+                  <circle cx="100" cy="100" r="80" fill="#3b82f6" 
+                          stroke-dasharray="125 377" stroke-dashoffset="0" 
+                          fill="none" stroke-width="80" />
+                  <circle cx="100" cy="100" r="80" fill="#f59e0b" 
+                          stroke-dasharray="50 377" stroke-dashoffset="-125" 
+                          fill="none" stroke-width="80" />
+                </svg>
+                <div class="pie-center">
+                  <div class="pie-percentage">83%</div>
+                </div>
+              </div>
+              <div class="pie-legend">
+                <div class="legend-item">
+                  <div class="legend-color green"></div>
+                  <span>Phi</span>
+                </div>
+                <div class="legend-item">
+                  <div class="legend-color blue"></div>
+                  <span>Nurs</span>
+                </div>
+                <div class="legend-item">
+                  <div class="legend-color orange"></div>
+                  <span>Doctors</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

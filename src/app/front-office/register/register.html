@@ -1,0 +1,144 @@
+<div class="register-container">
+  <div class="register-card">
+    <div class="register-header">
+      <div class="logo">
+        <div class="logo-circle"></div>
+        <span class="logo-text">MEDICAREAI</span>
+      </div>
+      <h2 class="register-title">Create your account</h2>
+      <p class="register-subtitle">Start your health journey with us</p>
+    </div>
+
+    <form class="register-form" (ngSubmit)="onRegister()">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName" class="form-label">First Name</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            class="form-input"
+            placeholder="Enter your first name"
+            [(ngModel)]="firstName"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            class="form-input"
+            placeholder="Enter your last name"
+            [(ngModel)]="lastName"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-input"
+          placeholder="Enter your email"
+          [(ngModel)]="email"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          class="form-input"
+          placeholder="Enter your phone number"
+          [(ngModel)]="phone"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-input"
+          placeholder="Create a strong password"
+          [(ngModel)]="password"
+          required
+        />
+        <div class="password-requirements">
+          <small>Minimum 8 characters, include uppercase, lowercase, and numbers</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          class="form-input"
+          placeholder="Confirm your password"
+          [(ngModel)]="confirmPassword"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="userType" class="form-label">Account Type</label>
+        <select id="userType" name="userType" class="form-select" [(ngModel)]="userType" required>
+          <option value="">Select account type</option>
+          <option value="patient">Patient</option>
+          <option value="doctor">Doctor</option>
+          <option value="nurse">Nurse</option>
+          <option value="pharmacist">Pharmacist</option>
+        </select>
+      </div>
+
+      <div class="form-options">
+        <label class="checkbox-container">
+          <input type="checkbox" [(ngModel)]="agreeTerms" name="agreeTerms" required />
+          <span class="checkmark"></span>
+          I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a>
+        </label>
+      </div>
+
+      <button type="submit" class="register-btn" [disabled]="isLoading || !agreeTerms">
+        <span *ngIf="!isLoading">Create Account</span>
+        <span *ngIf="isLoading">Creating Account...</span>
+      </button>
+    </form>
+
+    <div class="register-footer">
+      <p class="login-text">
+        Already have an account? 
+        <a routerLink="/login" class="login-link">Sign in</a>
+      </p>
+    </div>
+
+    <div class="divider">
+      <span>OR</span>
+    </div>
+
+    <div class="social-register">
+      <button type="button" class="social-btn google">
+        <span class="social-icon">G</span>
+        Google
+      </button>
+      <button type="button" class="social-btn facebook">
+        <span class="social-icon">f</span>
+        Facebook
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
